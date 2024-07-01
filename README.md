@@ -12,9 +12,9 @@ the endpoint above is a simple **GET** request that takes in a query parameter *
 visitor_name: str
 ```
 
-### request
+###  Usage
 ```
-https://violent-fifine-hng-ae225d70.koyeb.app/api/hello?visitor_name=mark
+GET: https://violent-fifine-hng-ae225d70.koyeb.app/api/hello?visitor_name=mark
 ```
 
 #### response
