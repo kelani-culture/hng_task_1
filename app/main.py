@@ -19,12 +19,12 @@ class Person(BaseModel):
     greeting: Optional[str]
 
 
-async def get_ip() -> str:
-    response = requests.get("https://api.ipify.org")
+# async def get_ip() -> str:
+#     response = requests.get("https://api.ipify.org")
 
-    if response.status_code != 200:
-        return ""
-    return response.text
+#     if response.status_code != 200:
+#         return ""
+#     return response.text
 
 
 # async def get_location(ip_address: str) -> dict:
@@ -57,7 +57,7 @@ async def greeting(request: Request, visitor_name: str):
         client_ip = x_forwarded_for.split(",")[0].strip()
 
     # get info on location
-    client_ip =  await get_ip()
+    # client_ip =  await get_ip()
     g = geocoder.ipinfo(client_ip)
 
     if not g.ok:
