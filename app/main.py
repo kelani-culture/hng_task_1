@@ -52,7 +52,7 @@ async def greeting(request: Request, visitor_name: str):
     return a vistor name with greetings
     """
     client_ip = request.client.host
-    x_forwarded_for = request.headers.get("x-forwarderd-for")
+    x_forwarded_for = request.headers.get("X-Forwarded-For")
     if x_forwarded_for:
         client_ip = x_forwarded_for.split(",")[0].strip()
 
